@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 05</title>
+  <script>
+    function crearTabla() {
+      var numValores = parseInt(document.getElementById("numValores").value);
+      var tablaHTML = "<table>";
+      for (var i = 1; i <= numValores; i++) {
+        tablaHTML += "<tr><td>Valor " + i + ":</td><td><input type='number' id='valor" + i + "'></td></tr>";
+      }
+      tablaHTML += "</table>";
+      tablaHTML += "<button onclick='calcularSuma()'>Calcular Suma</button>";
+      document.getElementById("tabla").innerHTML = tablaHTML;
+    }
+
+    function calcularSuma() {
+      var numValores = parseInt(document.getElementById("numValores").value);
+      var suma = 0;
+      for (var i = 1; i <= numValores; i++) {
+        var valor = parseFloat(document.getElementById("valor" + i).value);
+        suma += valor;
+      }
+      document.getElementById("resultado").innerHTML = "La suma de los valores es: " + suma;
+    }
+  </script>
+</head>
+<body>
+  <h1>Ejercicio 05 - Tabla dinamica y suma</h1>
+  <form onsubmit="event.preventDefault(); crearTabla();">
+    <label for="numValores">Número de valores:</label>
+    <input type="number" id="numValores" min="1" required>
+    <input type="submit" value="Crear tabla">
+  </form>
+  <div id="tabla"></div>
+  <p id="resultado"></p>
+</body>
+</html>

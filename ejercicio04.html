@@ -1,0 +1,21 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 04</title>
+    <script>
+        function obtenerCodigoSesion() {
+            var url = document.getElementById("url").value;
+            // Extraer el código de sesión sin guiones separadores, usamos expresiones regulares
+            var codigo = url.split("/").pop().replace(/-/g, "");
+            document.getElementById("resultado").innerHTML = "Código de sesión: " + codigo;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 04 - Obtener código de sesión de Google Meet</h1>
+    <label for="url">Ingresa el URL de la sesión de Google Meet:</label><br>
+    <input style="width: 300px;" type="text" id="url" name="url" placeholder="LINK"><br>
+    <button onclick="obtenerCodigoSesion()">Obtener código de sesión</button>
+    <p id="resultado"></p>
+</body>
+</html>
