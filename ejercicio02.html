@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>Ejercicio02</title>
+        <h1>Ejercicio02 - invertir palabra</h1>
+        <button onclick="invertir()"> Ingresar e invertir palabra</button>
+        <p id="original"></p>
+        <p id="cambio"></p>
+        <script>
+            function invertir(){
+                palabra=prompt("Ingresa una palabra o frase");
+                invertida="";
+                for(i=palabra.length -1 ; i>=0;i--){
+                    invertida = invertida + palabra.charAt(i);
+                }
+            document.getElementById("original").innerHTML="Palabra original: "+palabra;
+            document.getElementById("cambio").innerHTML="Palabra invertida: "+invertida;
+            }
+        </script>
+    </body>
+</html>

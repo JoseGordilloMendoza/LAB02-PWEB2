@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>Ejercicio01</title>
+        <h1>Ejercicio01 - New Date()</h1>
+        <p id="fecha entera"></p>
+        <p id="fecha"></p>
+        <script>
+            const d = new Date();
+            day = d.getDay();
+            diaReal="";
+            if(day==0)
+                diaReal="Domingo";
+            else if (day==1)
+                diaReal="Lunes";
+            else if (day==2)
+                diaReal="Martes";
+            else if (day==3)
+                diaReal="Miercoles";
+            else if (day==4)
+                diaReal="Jueves";
+            else if (day==5)
+                diaReal="Viernes";
+            else
+                diaReal="Sabado";
+            document.getElementById("fecha entera").innerHTML="Mostrando el dia para comprobar: "+d;
+            document.getElementById("fecha").innerHTML="El dia de hoy es "+diaReal;
+        </script>
+    </body>
+</html>
