@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>Ejercicio03</title>
+        <h1>Ejercicio02 - Dias restantes al dia de Arequipa</h1>
+        <button onclick="invertir()"> Ingresar e invertir palabra</button>
+        <p id="diaArequipa"></p>
+        <p id="restante"></p>
+        <script>
+            let diaAQP = new Date('2023-08-15');
+            let hoy = new Date();
+            var restante= Math.floor((diaAQP - hoy)/(1000*60*60*24));
+            document.getElementById("diaArequipa").innerHTML="Dia de Arequipa "+diaAQP;
+            document.getElementById("restante").innerHTML="Dias restantes: "+restante;git
+        </script>
+    </body>
+</html>
